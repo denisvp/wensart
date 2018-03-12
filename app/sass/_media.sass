@@ -1,0 +1,200 @@
+@import "vars"
+
+
+/*==========  Desktop First  ==========*/
+
++media-breakpoint-down(xl)
+	.name-logo
+				display: none	
+	
++media-breakpoint-down(lg)
+	.middel-header
+		.logo
+			img
+				width: 50px
+				height: auto
+		.brend
+			margin-left: -20px
+			img
+				width: 120px
+				height: auto
+		.name
+			margin-left: -35px			
+			h1
+				font-size: 28px
+				&::before
+					display: none
+			p
+				span
+					font-size: 15px
+		.search-form
+			width: 260px
+		.card-summ
+			a::before
+				left: 30px
+	.header-menu
+		.main-menu
+			ul
+				li
+					a
+						padding-left: 14px
+						padding-right: 14px
+		.menu-ver-content
+			.left-menu
+				margin-top: 10px 
+				visibility: hidden			
+				opacity: 0
+
+
++media-breakpoint-down(md)
+	.middel-header
+		.name
+			margin: 0 auto
+			width: 330px
+			h1
+				padding-top: 5px
+			&-logo				
+				display: block
+				float: left
+				margin-right: 10px
+				img
+					width: 70px
+					height: auto		
+		// .name
+		// 	margin-left: -60px					
+		// .search
+		// 	margin-left: -35px
+		// 	.search-form
+		// 		width: 200px
+		// .card-summ
+		// 	a::before
+		// 		left: 0px
+	.header-menu
+		.mobile-menu
+			.header-search
+				left: -65px
+				right: -100px
+				
+
+
+			
+
++media-breakpoint-down(sm)
+	.top-line-mail, .top-line-phone
+		.fa
+			display: none
+	.top-line-menu
+		ul
+			.user-link
+				a:hover
+					text-indent: 28px
+					width: auto					
+			li
+				a:hover
+					width: 35px
+					text-indent: 50px
+	.top-line-menu-hover
+		ul
+			.user-link
+				a
+					text-indent: 28px
+					width: auto
+					background-color: transparent
+					color: #444
+					&::before
+						// color: #fff
+	// .middel-header
+	// 	.name
+	// 		margin: 0 auto
+	// 		width: 330px
+	// 		h1
+	// 			padding-top: 5px
+	// 		&-logo				
+	// 			display: block
+	// 			float: left
+	// 			margin-right: 10px
+	// 			img
+	// 				width: 70px
+	// 				height: auto
+
+	.header-menu
+		.mobile-menu
+			.header-search
+				left: -35px
+				right: -50px
+
++media-breakpoint-down(xs)
+	.top-line
+		.top-line-mail
+			display: none
+	.top-line-menu
+		ul
+			.user-link
+				a
+					text-indent: 50px
+					width: 35px
+				&:hover
+					text-indent: 50px
+					width: 35px
+	.middel-header		
+		.name			
+			width: 240px
+			margin: 0 auto
+			h1
+				font-size: 27px				
+			p
+				margin-bottom: 10px
+				span
+					font-size: 14px
+			&-logo
+				width: 100%
+				text-align: center
+				margin: 10px 0 0px 0 
+				img
+					width: 70px
+					height: auto
+	.header-menu
+		.mobile-menu
+			.header-search
+				left: 0px
+				right: -55px
+				.search-form				
+					width: 80%
+
+@media (max-width: 481px)
+	.header-menu
+		.mobile-menu
+			.header-search
+				left: 0px
+				right: -65px
+				.search-form				
+					width: 70%
+
+@media (max-width: 351px)
+	.header-menu
+		.mobile-menu
+			.header-search
+				left: 0px
+				right: -100px
+				.search-form				
+					width: 60%
+			
+
+
+/*==========  Mobile First  ==========*/
+
++media-breakpoint-up(xs)	
++media-breakpoint-up(sm)
++media-breakpoint-up(md)
++media-breakpoint-up(lg)
++media-breakpoint-up(xl)
+
+@media (min-width: 992px) and (max-width: 1199px)
+	/**/
+	.header-menu
+		.col-lg-3
+			flex: 0 0 30%
+			max-width: 30%
+		.col-lg-9
+			flex: 0 0 70%
+			max-width: 70%

@@ -1,0 +1,655 @@
+@import "vars"
+@import "fonts"
+@import "libs"
+
+::placeholder
+	color: #666
+
+::selection
+	background-color: $accent
+	color: #fff
+
+html, body
+	height: 100%
+
+body
+	font-size: 15px
+	color: #333333
+	min-width: 320px
+	position: relative
+	line-height: 1.65
+	font-family: $default-font
+	overflow-x: hidden
+	background-color: #fff
+	input, textarea
+			border: #666 1px solid
+			outline: none
+			&:focus:required:invalid
+				border-color: red
+			&:required:valid
+				border-color: green
+.container
+	padding-left: 0
+	padding-right: 0 
+.img-responsive
+	display: block
+	max-width: 100%
+	height: auto
+
+.text-center
+	text-align: center
+
+.text-bold
+	font-weight: bold
+
+//Заголовки
+h1
+	font-family: "OPSCondBold", sans-serif
+	font-size: 18px
+	font-weight: bold
+h2, h3
+	font-weight: bold
+	text-transform: uppercase
+h2
+	font-size: 16px
+h3
+	font-size: 14px
+h4
+	font-size: 16px
+	font-weight: bold
+
+.top-line
+	background-color: $bg-top-line
+	color: #444444	
+	.fa
+		color: #999						
+	&-mail, &-phone
+		padding-top: 5px
+		font-size: 14px
+		height: 35px		
+		float: left
+		border-left: 1px solid #ddd		
+		padding-left: 10px
+		padding-right: 10px
+		i	
+			padding-right: 10px			
+	&-phone
+		border-right: 1px solid #ddd		
+	&-menu
+		float: right
+		ul
+			list-style: none
+			padding: 0
+			margin: 0
+			li
+				float: left
+				position: relative
+				a
+					display: block										
+					width: 35px					
+					line-height: 32px
+					height: 34px
+					border-right: 1px solid #ddd
+					overflow: hidden
+					text-indent: 50px
+					padding-right: 0px
+					padding-left: 5px
+					transition: all 0.4s ease 0s
+					font-size: 14px
+					// line-height: 30px
+					position: relative
+					text-decoration: none
+					color: #fff					
+					&::before																		
+						color: #999
+						display: inline-block
+						font-family: FontAwesome
+						font-style: normal
+						font-weight: normal
+						font-variant: normal
+						font-synthesis: weight style
+						font-stretch: normal
+						font-size-adjust: none
+						font-language-override: normal
+						font-kerning: auto
+						font-feature-settings: normal
+						line-height: 1
+						text-align: center
+						font-size: 14px
+						text-indent: 0px
+						position: absolute
+						left: 10px
+						top: 10px
+				&:hover
+					a
+						background-color: $accent
+						width: auto
+						text-indent: 28px
+						padding-right: 10px
+						&::before
+							color: #fff					
+			.user-link
+				a
+					border-left: 1px solid #ddd
+					background-color: $accent
+					line-height: 32px
+					color: #fff
+					width: auto
+					// padding-left: 5px
+					text-indent: 28px
+					padding-right: 10px
+					&::before
+						content: '\f007'
+						color: #fff
+			.wishlist
+				a::before
+					content: '\f004'
+			.user-exit
+				a::before
+					content: '\f023'
+			.checkout
+				a::before
+					content: '\f046'
+
+.top-line-menu-hover
+	ul
+		.user-link
+			a
+				text-indent: 50px
+				width: 35px
+				background-color: transparent
+				&::before
+					color: #999
+
+.middel-header
+	.row
+		min-height: 110px
+	.brend
+		margin-left: -15px
+	.name
+		h1, p
+			margin: 0
+			padding: 0
+		h1
+			font-size: 29px
+			line-height: 30px
+			&::before
+				content: '\f041'			
+				display: inline-block
+				font-family: FontAwesome
+				font-style: normal
+				font-weight: normal
+				font-variant: normal
+				font-synthesis: weight style
+				font-stretch: normal
+				font-size-adjust: none
+				font-language-override: normal
+				font-kerning: auto
+				font-feature-settings: normal
+				line-height: 1
+				text-align: center
+				font-size: 29px
+				text-indent: 0px
+				position: absolute
+				left: -15px
+				top: 15px
+		p
+			font-size: 12px
+			span
+				font-size: 17px
+	.search-form
+		width: 310px
+		height: 34px
+		border: 1px solid #dddddd
+		border-right: 0     
+		padding-left: 10px
+		margin-top: 0
+		margin-bottom: 0
+		font-size: 12px   
+		background: #FFF
+		float: left
+	.search-button
+		padding: 1px 6px 2px 8px
+		background-color: #666666
+		border: 1px solid #666666     
+		height: 34px      
+		color: #fff !important      
+		font-size: 18px
+		font-family: "FontAwesome" !important
+	.card-summ
+		text-align: right
+		a
+			text-transform: uppercase
+			color: #444
+			text-decoration: none
+			font-weight: bold
+			font-size: 14px
+			&::before
+				content: '\f07a'
+				color: #fff
+				display: inline-block
+				width: 35px
+				height: 35px
+				background-color: $accent
+				font-family: FontAwesome
+				font-style: normal
+				font-weight: normal
+				font-variant: normal
+				font-synthesis: weight style
+				font-stretch: normal
+				font-size-adjust: none
+				font-language-override: normal
+				font-kerning: auto
+				font-feature-settings: normal
+				line-height: 1
+				text-align: center
+				font-size: 24px
+				padding-top: 4px
+				padding-right: 3px				
+				position: absolute
+				left: 60px
+				top: 8px
+		.summ
+			font-size: 14px
+			&::before
+				content: '\f158'
+				font-family: FontAwesome
+				padding-right: 5px
+.header-menu
+	background-color: $bg-header-mnu	
+	height: 50px	
+	.menu-ver-content
+		position: relative		
+		&:hover
+			.left-menu
+				visibility: visible
+				opacity: 1			
+				margin-top: 0				
+		.menu-btn
+			background-color: $bg-accent-menu
+			height: 50px		
+			a
+				color: white
+				display: block
+				text-transform: uppercase			
+				font-size: 15px
+				padding-top: 12px
+				padding-left: 49px
+				&:hover
+					text-decoration: none
+				&::before
+					content: '\f0c9'
+					color: #fff
+					display: inline-block								
+					font-family: FontAwesome				
+					line-height: 1
+					text-align: center
+					font-size: 18px				
+					position: absolute
+					left: 20px
+					top: 16px
+				&::after
+					content: '\f107'
+					color: #fff
+					display: inline-block								
+					font-family: FontAwesome				
+					line-height: 1
+					text-align: center
+					font-size: 21px				
+					position: absolute
+					right: 15px
+					top: 14px
+		.left-menu			
+			z-index: 1000
+			visibility: hidden			
+			opacity: 0
+			position: absolute
+			width: 100%
+			transition: margin 0.3s
+			margin-top: 10px   		
+			background-color: #fff
+			border-right: 1px solid #ddd
+			border-bottom: 1px solid #ddd
+			border-left: 1px solid #ddd
+			border-top: 3px solid $accent		
+			&-hidden			//'этот класс используется для показа меню на главной странице с помощью jscript'
+				visibility: visible
+				margin-top: 0
+				opacity: 1					
+			ul
+				padding-top: 3px
+				list-style: none
+				margin: 0
+				padding: 0      
+				li
+					position: relative
+					display: block        
+					&:hover
+						background-color: $accent
+						border: none
+						margin: 0 -1px
+						a
+							color: #fff           
+							padding-left: 18px
+						.left-menu-child
+							visibility: visible							
+							opacity: 1
+							transition: opacity 0.3s ease 0s
+							li
+								margin: 0
+								background-color: #fff
+								a
+									color: #333
+								&:hover
+									a
+										color: $accent
+
+					a
+						color: #333
+						text-decoration: none
+						display: block
+						position: relative
+						padding: 10px 12px 10px 17px
+					.left-menu-child
+						z-index: 90000
+						font-size: 14px
+						margin-left: -1px
+						padding-left: 20px
+						border: 1px solid #ddd						
+						opacity: 0
+						visibility: hidden						
+						color: #333
+						position: absolute						
+						top: -50px
+						left: 100%
+						display: block
+						background-color: #fff
+						width: 700px
+						h3
+							text-transform: none
+							padding: 0
+							margin: 0
+						a
+							color: #333
+							padding: 3px 0 0 20px
+						.child-title
+							width: 100%
+							display: inline-block
+						.child-menu
+							padding-top: 20px
+							display: inline-block
+							float: left
+							width: 475px
+							p 
+								font-size: 12px
+							a
+								padding-left: 0							
+						.child-banner
+							display: inline-block
+							width: 300px
+							float: right
+							a
+								padding: 0
+								img
+									float: right
+					.class-uslugi						
+						padding: 0
+						top: -350px						
+						nav
+							margin-bottom: 10px
+						.child-menu
+							width: 45%
+							padding-left: 20px							
+							// border-right: 1px solid #ddd
+							a
+								padding-left: 20px
+						.child-col-2-wrap
+							display: inline-block
+							float: left
+							border-left: 1px solid #ddd
+							width: 55%
+							.child-menu-col-2
+								padding-left: 20px
+								padding-top: 20px
+								
+								// float: left
+								display: inline-block
+							.child-banner
+								display: inline
+								// float: left
+								width: 100%
+								margin-top: 20px
+								// margin-left: 30px
+					.class-print						
+						top: -5px
+						width: 600px						
+						h3
+							margin-bottom: 10px													
+						.child-menu
+							width: 45%
+							padding-top: 10px							
+							a
+								padding-left: 20px
+							nav
+								padding-bottom: 20px
+						.child-col-2-wrap							
+							display: block
+							float: left							
+							width: 55%
+							.child-menu-col-2								
+								padding-left: 20px								
+								// float: left
+								display: block
+							.child-banner								
+								display: inline
+								// float: left
+								width: 100%
+								height: auto
+								
+
+							
+
+							
+
+				.online-shop          
+					a           
+						border-top: 1px solid #ddd        
+			.menu-fa      
+				font-size: 18px
+				width: 30px
+				position: relative
+				top: 1px            
+				color: #666     
+			.fa-chevron-right 
+				position: relative
+				top: 9px
+				right: 4px      
+				float: right
+				font-size: 10px
+	.main-menu
+		margin-left: -30px
+		ul
+			margin: 0
+			padding: 0
+			li
+				list-style: none
+				display: block
+				float: left				
+				a
+					color: #fff
+					line-height: 50px
+					padding-left: 34px
+					padding-right: 34px
+					display: block
+					font-size: 13px
+					text-transform: uppercase
+					&:hover
+						text-decoration: none
+						background-color: #7d7d7d
+	.mobile-menu
+		
+		.mmenu-wrap
+			margin-top: 5px
+			margin-right: 5px
+			height: 40px
+			width: 40px			
+			background-color: $bg-footer
+			// display: inline-block
+			// float: left
+			.hamburger										
+				padding: 0
+				padding-left: 7px
+				position: absolute
+				top: 14px
+				left: 15px
+				.hamburger-box
+						width: 25px						
+						.hamburger-inner, .hamburger-inner::after, .hamburger-inner::before							
+							width: 25px
+							height: 2px
+							border-radius: 0
+							background-color: #fff												
+			.hamburger--emphatic.is-active .hamburger-inner
+				background-color: transparent	
+		
+		.header-search			
+			position: absolute
+			left: -35px
+			right: -35px
+			.search-form				
+				width: 90%
+				margin-top: 5px
+				height: 40px
+				float: left
+				border-right: none
+			.search-button			
+				margin-top: 5px				
+				background-color: $accent
+				height: 40px
+				border-left: none
+				// display: inline-block
+				color: #fff !important      
+				font-size: 18px
+				font-family: "FontAwesome" !important
+		.wrap-card
+			float: right
+			// display: block
+			a::before
+				content: '\f07a'
+				color: #fff
+				display: inline-block
+				width: 38px
+				height: 38px
+				background-color: $accent
+				font-family: FontAwesome
+				line-height: 1
+				text-align: center
+				font-size: 28px
+				padding-top: 4px
+				padding-right: 4px
+				margin: 6px 0 0 0
+.main-content
+	margin-top: 25px
+	.main-slider		
+		height: 477px
+		width: 600px		
+		float: left
+		border: 1px solid #ccc
+		.frontpage-slider 
+			&:hover
+				.slick-prev, .slick-next
+					background-color: rgba(244, 161, 55, 0.4)
+					transition: background-color 0.3s ease 0s
+					&:before
+						transition: opacity 0.3s ease 0s
+						opacity: 0.8	
+			.slick-prev, .slick-next
+				font-size: 0				
+				line-height: 0
+				position: absolute
+				top: 45%
+				// display: block
+				width: 30px
+				height: 50px
+				padding: 0
+				// background-color: $accent
+				background-color: rgba(244, 161, 55, 0)
+				cursor: pointer
+				// color: transparent
+				border: none
+				outline: none
+				// background: transparent
+				z-index: 100
+				&:hover
+					background-color: rgba(244, 161, 55, 0.9)
+				&:before					
+					font-family: "FontAwesome" !important
+					font-size: 18px
+					line-height: 3
+					opacity: 0
+					color: white
+			.slick-prev:before
+				content: ''
+			.slick-next:before
+				content: ''
+			.slick-next
+				right: 0
+			.slick-prev
+				left: 0
+			.banner-1
+				display: block
+				// height: 481px
+				// background-image: url(/img/2.png)
+				// background-position: center					
+				// background-repeat: no-repeat
+				// background-size: cover
+				img
+					// width: 100%
+				h2
+					position: relative
+					font-family: "OPSCondBold", sans-serif
+					color: #ecf0b3
+					font-size: 28px
+					text-shadow: 2px 2px 5px black
+					left: 20px
+					top: 12px				
+			.banner-2
+				display: block
+				height: 474px
+				background-image: url(/img/banner2.png)
+				background-position: center
+			.banner-3
+				display: block
+				height: 474px
+				background-image: url(/img/banner3.png)
+				background-position: center		
+	.form-banner-wrapper
+		float: right
+		.main-form
+			height: 300px
+			width: 260px
+			background-color: #ddd
+		.main-banner
+			margin-top: 10px
+			height: 150px
+			width: 260px
+			background-color: #ddd
+
+
+
+
+			
+				
+				
+
+
+
+
+
+
+
+
+				
+
+
+@import "media" // Always at the end

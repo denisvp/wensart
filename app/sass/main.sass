@@ -326,11 +326,16 @@ h4
 					position: relative
 					display: block        
 					&:hover
-						background-color: $accent
-						border: none
+						// background-color: $accent
+						background-color: $left-mnu-hov-bg
+						// border: none
+						border-left: 2px solid $accent
 						margin: 0 -1px
+						// padding-left: 3px 
 						a
-							color: #fff           
+							// color: #fff           
+							margin-left: -2px
+							color: $accent           							
 							padding-left: 18px
 						.left-menu-child
 							visibility: visible							
@@ -511,7 +516,12 @@ h4
 					text-transform: uppercase
 					&:hover
 						text-decoration: none
-						background-color: #7d7d7d
+						// background-color: #7d7d7d
+						background-color: #fff
+						// background: rgba(0,0,0, 0.3)
+						color: $accent
+						border-top: 2px solid $accent
+						line-height: 48px
 	.mobile-menu
 		
 		.mmenu-wrap
